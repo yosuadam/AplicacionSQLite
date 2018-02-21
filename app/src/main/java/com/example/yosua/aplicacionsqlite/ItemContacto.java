@@ -7,6 +7,7 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import org.w3c.dom.Text;
@@ -20,7 +21,7 @@ public class ItemContacto extends AppCompatActivity {
 
     private final SQLite_OpenHelper helper = new SQLite_OpenHelper(this, "BD1", null, 1);
 
-    private TextView tvNombreContacto, tvTelefonoContacto, tvEmailContacto;
+    private EditText etNombre, etTelefono, etEmail;
 
 
     @Override
@@ -35,14 +36,14 @@ public class ItemContacto extends AppCompatActivity {
         telefono = bundle.getString("telefono");
         email = bundle.getString("email");
 
-        tvNombreContacto = (TextView)findViewById(R.id.tvNombreContacto);
-        tvNombreContacto.setText(nombre);
+        etNombre = (EditText) findViewById(R.id.etNombreContactoVista);
+        etNombre.setText(nombre);
 
-        tvTelefonoContacto = (TextView)findViewById(R.id.tvTelefonoContacto);
-        tvTelefonoContacto.setText(telefono);
+        etTelefono = (EditText) findViewById(R.id.etTelefonoClienteVista);
+        etTelefono.setText(telefono);
 
-        tvEmailContacto = (TextView)findViewById(R.id.tvEmailContacto);
-        tvEmailContacto.setText(email);
+        etEmail = (EditText)findViewById(R.id.etEmailClienteVista);
+        etEmail.setText(email);
     }
 
     public int getId_Contacto() { return id_Contacto; }

@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:padding="20dp"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.example.yosua.aplicacionsqlite.ItemContacto"
     tools:showIn="@layout/activity_contacto">
@@ -13,17 +14,79 @@
         android:id="@+id/tvNombreContacto"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:text="Nombre"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/etNombreContactoVista"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Introduce nombre"
+        android:inputType="textPersonName" />
 
     <TextView
         android:id="@+id/tvTelefonoContacto"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:layout_marginTop="20dp"
+        android:text="Telefono"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/etTelefonoClienteVista"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Introduce teléfono"
+        android:inputType="textPersonName" />
 
     <TextView
         android:id="@+id/tvEmailContacto"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:layout_marginTop="20dp"
+        android:text="Email"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/etEmailClienteVista"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Introduce email"
+        android:inputType="textPersonName" />
+
+    <Button
+        android:id="@+id/btnActualizarCliente"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="30dp"
+        android:text="Guardar cambios" />
+
+    <Button
+        android:id="@+id/btnBorrarContacto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:text="Borrar contacto" />
+
+    <Button
+        android:id="@+id/btnLlamar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:text="Llamar" />
+
+    <Button
+        android:id="@+id/btnMandarMensaje"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:text="Mandar mensaje" />
 </LinearLayout>

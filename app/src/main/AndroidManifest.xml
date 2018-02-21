@@ -27,7 +27,8 @@
         <activity
             android:name=".ItemContacto"
             android:label="@string/title_activity_contacto"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".NuevoContacto"></activity>
     </application>
 
 </manifest>

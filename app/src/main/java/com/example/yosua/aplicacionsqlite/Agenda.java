@@ -47,11 +47,9 @@ public class Agenda extends AppCompatActivity {
         btnNuevoContacto.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                helper.abrirBD();
-                helper.insertarContacto(idUsuario, "Paco", "999999999", "paco@gmail.com");
-                helper.cerrarBD();
-
-                Toast.makeText(getApplicationContext(), "Contacto añadido", Toast.LENGTH_LONG).show();
+                Intent i = new Intent(getApplicationContext(), NuevoContacto.class);
+                i.putExtra("idUsuario", idUsuario);
+                startActivity(i);
             }
         });
 
@@ -72,8 +70,10 @@ public class Agenda extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
 
-
+    public void recargarListaContactos() {
+        lvContactos.refreshDrawableState();
     }
 
     private void cargarListaContactos() {
